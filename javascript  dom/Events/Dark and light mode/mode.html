@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Dom 🔥</title>
+    <link rel="stylesheet" href="mode.css" />
+    <script src="mode.js" defer></script>
+    <!-- defer is for the making sure easy exection of the js code  -->
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <img
+        id="toggleImage"
+        src="day 1.png"
+        style="width: 100px"
+        class="clickable btn"
+        onclick="toggleMode()"
+      />
+      <h6>set the theme</h6>
+    </nav>
+    <center>
+      <h1>Heading</h1>
+    </center>
+    <h2>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi
+      assumenda obcaecati saepe soluta, aliquid impedit vel debitis laboriosam
+      possimus enim vero nesciunt aspernatur blanditiis fugiat fugit provident
+      officiis ipsam. Maiores excepturi repudiandae molestias ipsum laborum
+      beatae repellat dignissimos quidem culpa ab. Hic a qui eveniet et error,
+      facere enim eum? Minus, quo? Aliquam accusamus alias ullam eveniet et
+      odit? Nisi vel repellendus animi itaque dolores libero laudantium alias
+      atque aut, tempore et veniam adipisci. Voluptatum error, vitae
+      reprehenderit, veniam distinctio vel qui quisquam autem inventore est
+      natus ea consequatur?
+    </h2>
+    <!-- <button onclick="Darkfn()" class="btn dark">dark</button>
+     <button onclick="Lightfn()" class="btn light">Light</button> -->
+
+    <!-- here i have removed  onclick ans in the console 
+     multiple out is created rather then givening the count 
+     of number of times the button was clicked , which is happeninf due 
+     to the mutiple event listener present in the (on ein Js and one in HTML)
+     which was giving multiple console outputs for a single click.-->
+     
+    <div id="clock">
+      <p>Time is....</p>
+      <p>1 : 30 PM</p>
+    </div> 
+
+    </body>
+</html>

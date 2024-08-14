@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Color Toggle</title>
+</head>
+<body>
+
+<p id="myText" style="color: black;">Hello, world!</p>
+
+<button onclick="toggleColor()">Toggle Color</button>
+
+<script>
+    function toggleColor() {
+        var text = document.getElementById('myText');
+        if (text.style.color === 'black') {
+            text.style.color = 'red';
+        } else {
+            text.style.color = 'black';
+        }
+    }
+</script>
+
+</body>
+</html>

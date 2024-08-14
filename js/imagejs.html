@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="document.getElementById('myImage').src='onb.jpg'">Turn on the light</button>
+    
+    <img id="myImage" src="offb.jpg" style="width:100px">
+    
+    <button onclick="document.getElementById('myImage').src='offb.jpg'">Turn off the light</button>
+     -->
+
+ <!-- <h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<button  onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button> -->
+
+<!-- <h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can hide HTML elements.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button>
+ -->
+
+<button onclick="toggleImage()">Toggle Image</button>
+
+<img id="myImage" src="onb.jpg" style="width:100px">
+
+<script>
+    function toggleImage() {
+        img = document.getElementById('myImage');
+        if (img.src.includes('onb.jpg')) {
+            img.src = 'offb.jpg';
+        } else {
+            img.src = 'onb.jpg';
+        }
+    }
+</script>  
+    </body>
+</html>

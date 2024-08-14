@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Loop Exercises</title>
+</head>
+<body>
+
+<h2>For Loop Exercises</h2>
+
+<script>
+  // Print numbers from 1 to 10
+  document.write("Printing numbers from 1 to 10:");
+  for (let i = 1; i <= 10; i++) {
+    documnet.write(i);
+  }
+
+  // Print even numbers from 1 to 20
+  console.log("\nPrinting even numbers from 1 to 20:");
+  for (let i = 2; i <= 20; i += 2) {
+    console.log(i);
+  }
+
+  // Print odd numbers from 1 to 20
+  console.log("\nPrinting odd numbers from 1 to 20:");
+  for (let i = 1; i <= 20; i += 2) {
+    console.log(i);
+  }
+
+  // Print the multiplication table of a given number (e.g., 5)
+  const num = 5;
+  console.log(`\nMultiplication table of ${num}:`);
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${num} * ${i} = ${num * i}`);
+  }
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Loop Exercises</title>
+</head>
+<body>
+
+<h2>For Loop Exercises</h2>
+
+<!-- Display area for output -->
+<div id="output"></div>
+
+<script>
+  // Function to append text to the output div
+  function appendText(text) {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML += text + "<br>";
+  }
+
+  // Print numbers from 1 to 10
+  appendText("Printing numbers from 1 to 10:");
+  for (let i = 1; i <= 10; i++) {
+    appendText(i);
+  }
+
+  // Print even numbers from 1 to 20
+  appendText("<br>Printing even numbers from 1 to 20:");
+  for (let i = 2; i <= 20; i += 2) {
+    appendText(i);
+  }
+
+  // Print odd numbers from 1 to 20
+  appendText("<br><br>Printing odd numbers from 1 to 20:");
+  for (let i = 1; i <= 20; i += 2) {
+    appendText(i);
+  }
+
+  // Print the multiplication table of a given number (e.g., 5)
+  const num = 5;
+  appendText("<br><br>Multiplication table of " + num + ":");
+  for (let i = 1; i <= 10; i++) {
+    appendText(num + " * " + i + " = " + (num * i));
+  }
+</script>
+
+</body>
+</html>

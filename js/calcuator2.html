@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        /* .button{
+            height: 200px;
+            margin: 20px;
+            width: 200px;
+            background-color: aquamarine; 
+            margin:14px ;
+        }
+         
+        #buttoms{
+            padding: 10px;
+        }
+        #buttoms{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .button{
+        width: 300px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .buttoms{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-size: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+     </style>
+</head>
+<body>
+    <div class="button">
+        <input type="text" id="button-result"><br>
+        <button class="buttoms"onclick="joining(1)">1</button>
+        <button class="buttoms"onclick="joining(2)">2</button>
+        <button class="buttoms"onclick="joining(3)">3</button>
+        <button class="buttoms"onclick="joining('+')">+</button><br>
+         <button class="buttoms"onclick="joining(4)">4</button>
+        <button class="buttoms"onclick="joining(5)">5</button>
+        <button class="buttoms"onclick="joining(6)">6</button>
+        <button class="buttoms"onclick="joining('-')">-</button><br>
+         <button class="buttoms"onclick="joining(7)">7</button>
+        <button class="buttoms"onclick="joining(8)">8</button>
+        <button class="buttoms"onclick="joining(9)">9</button>
+        <button class="buttoms"onclick="joining('*')">*</button><br>
+        <button class="buttoms"onclick="clearing()">C</button>
+        <button class="buttoms"onclick="joining()">0</button>
+        <button class="buttoms"onclick="calcuate()">=</button>
+        <button class="buttoms"onclick="joining('/')">/</button>
+
+    </div>
+
+    <script>
+        function joining(value){
+            document.getElementById("button-result").value += value;
+        }
+        function clearing(){
+            document.getElementById("button-result").value="";
+        }
+        function calcuate(){
+            result=document.getElementById("button-result").value;
+            answer= eval(result);
+            document.getElementById("button-result").value=answer
+            
+        }
+    </script>
+</body>
+</html>

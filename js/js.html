@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+  
+</head>
+<body>
+
+<form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <input type="submit" value="Submit">
+</form>
+
+<div id="confirmation" class="confirmation">
+    <h2>Confirmation</h2>
+    <p>Name: <span id="confirmName"></span></p>
+    <p>Email: <span id="confirmEmail"></span></p>
+</div>
+<input type="submit" name="clickme"
+value="click me" onclick="alert('Thank You!')"/>
+
+<script>
+    document.getElementById('myForm').addEventListener('submit', 
+    function(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+
+    
+        document.getElementById('confirmName').textContent = name;
+        document.getElementById('confirmEmail').textContent = email;
+        document.getElementById('confirmation').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

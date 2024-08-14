@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Switch Statement Example</title>
+<script>
+function checkDay() {
+    var day = document.getElementById("day").value;
+    var message;
+
+    switch(day) {
+        case "Monday":
+            message = "It's Monday! Time to start the week.";
+            break;
+        case "Tuesday":
+            message = "It's Tuesday! Keep up the good work.";
+            break;
+        case "Wednesday":
+            message = "It's Wednesday! Halfway through the week.";
+            break;
+        case "Thursday":
+            message = "It's Thursday! Almost there, keep pushing.";
+            break;
+        case "Friday":
+            message = "It's Friday! Time to celebrate!";
+            break;
+        case "Saturday":
+            message = "It's Saturday! Enjoy your weekend.";
+            break;
+        case "Sunday":
+            message = "It's Sunday! Relax and recharge.";
+            break;
+        default:
+            message = "Please enter a valid day of the week.";
+    }
+
+    document.getElementById("output").innerText = message;
+}
+</script>
+</head>
+<body>
+
+<h2>Enter a Day of the Week</h2>
+
+<select id="day">
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+</select>
+
+<button onclick="checkDay()">Check Day</button>
+
+<p id="output"></p>
+
+</body>
+</html>

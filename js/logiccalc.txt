@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .calculator {
+        width: 300px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .calculator-button {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-size: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="result" disabled>
+    <br>
+    <input type="button" class="calculator-button" value="1" onclick="appendToResult(1)">
+    <input type="button" class="calculator-button" value="2" onclick="appendToResult(2)">
+    <input type="button" class="calculator-button" value="3" onclick="appendToResult(3)">
+    <input type="button" class="calculator-button" value="+" onclick="appendToResult('+')">
+    <br>
+    <input type="button" class="calculator-button" value="4" onclick="appendToResult(4)">
+    <input type="button" class="calculator-button" value="5" onclick="appendToResult(5)">
+    <input type="button" class="calculator-button" value="6" onclick="appendToResult(6)">
+    <input type="button" class="calculator-button" value="-" onclick="appendToResult('-')">
+    <br>
+    <input type="button" class="calculator-button" value="7" onclick="appendToResult(7)">
+    <input type="button" class="calculator-button" value="8" onclick="appendToResult(8)">
+    <input type="button" class="calculator-button" value="9" onclick="appendToResult(9)">
+    <input type="button" class="calculator-button" value="*" onclick="appendToResult('*')">
+    <br>
+    <input type="button" class="calculator-button" value="C" onclick="clearResult()">
+    <input type="button" class="calculator-button" value="0" onclick="appendToResult(0)">
+    <input type="button" class="calculator-button" value="=" onclick="calculate()">
+    <input type="button" class="calculator-button" value="/" onclick="appendToResult('/')">
+</div>
+
+<script>
+    function appendToResult(value) {
+        document.getElementById('result').value += value;
+    }
+
+    function clearResult() {
+        document.getElementById('result').value = "";
+    }
+
+    function calculate() {
+        var result = document.getElementById('result').value;
+        var answer = eval(result);
+        document.getElementById('result').value = answer;
+    }
+</script>
+
+</body>
+</html>
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="number"], button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function add() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const result = num1 + num2;
+            document.getElementById("result").textContent = "Result: " + result;
+        }
+
+        function subtract() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const result = num1 - num2;
+            document.getElementById("result").textContent = "Result: " + result;
+        }
+
+        function multiply() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const result = num1 * num2;
+            document.getElementById("result").textContent = "Result: " + result;
+        }
+
+        function divide() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 === 0) {
+                document.getElementById("result").textContent = "Error: Cannot divide by zero";
+            } else {
+                const result = num1 / num2;
+                document.getElementById("result").textContent = "Result: " + result;
+            }
+        }
+    </script>
+</body>
+</html> 

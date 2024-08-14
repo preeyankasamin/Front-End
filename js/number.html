@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plus Minus Button</title>
+<style>
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  #number {
+    font-size: 24px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <button id="minus">-</button>
+  <span id="number">0</span>
+  <button id="plus">+</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const numberDisplay = document.getElementById("number");
+    const plusButton = document.getElementById("plus");
+    const minusButton = document.getElementById("minus");
+
+    let number = 0;
+
+    function updateNumberDisplay() {
+      numberDisplay.textContent = number;
+    }
+
+    function incrementNumber() {
+      number++;
+      updateNumberDisplay();
+    }
+
+    function decrementNumber() {
+      if (number > 0) {
+        number--;
+        updateNumberDisplay();
+      }
+    }
+
+    plusButton.addEventListener("click", incrementNumber);
+    minusButton.addEventListener("click", decrementNumber);
+
+    updateNumberDisplay();
+  });
+</script>
+
+</body>
+</html>
+
